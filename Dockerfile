@@ -8,8 +8,8 @@ RUN apt-get update && \
     mkdir /data
 
 # Add the concat script
-ADD https://raw.githubusercontent.com/volkstrader/video-processing/master/concat.sh /usr/local/bin/
-RUN chmod o+x /usr/local/bin/concat.sh
+# ADD https://raw.githubusercontent.com/volkstrader/video-processing/master/concat.sh /usr/local/bin/
+# RUN chmod o+x /usr/local/bin/concat.sh
 
 # Mount point
 VOLUME /data
