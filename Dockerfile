@@ -1,9 +1,11 @@
-FROM hcsoftech/ffmpeg
+FROM ubuntu:latest
 
 MAINTAINER HC Softech Inc. <hcsoftech@gmail.com>
 
 # Create /data directory
-RUN mkdir /data
+RUN apt-get update && \
+    apt-get install ffmpeg && \
+    mkdir /data
 
 # Add the concat script
 ADD https://raw.githubusercontent.com/volkstrader/video-processing/master/concat.sh /usr/local/bin/
